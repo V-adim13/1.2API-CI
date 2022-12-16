@@ -69,6 +69,27 @@ class MobileBankApiTestV1 {
 
 
     }
+    @Test
+    void shouldCurrencyUSD() {
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+                .when()
+                .get("/demo/accounts")
+                .then()
+                .body("[1].currency", equalTo("USD"));
+
+    }
+
+    @Test
+    void shouldCurrencyUSS() {
+        given()
+                .baseUri("http://localhost:9999/api/v1")
+                .when()
+                .get("/demo/accounts")
+                .then()
+                .body("[1].currency", equalTo("USS"));
+    }
 }
+
 
 
