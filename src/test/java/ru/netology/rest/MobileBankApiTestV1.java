@@ -58,17 +58,7 @@ class MobileBankApiTestV1 {
 
     }
 
-    @Test
-    void shouldCurrencyRUR() {
-        given()
-                .baseUri("http://localhost:9999/api/v1")
-                .when()
-                .get("/demo/accounts")
-                .then()
-                .body("[1].cerrency", equalTo("RUR"));
-
-
-    }
+    
     @Test
     void shouldCurrencyUSD() {
         given()
@@ -80,16 +70,9 @@ class MobileBankApiTestV1 {
 
     }
 
-    @Test
-    void shouldCurrencyUSS() {
-        given()
-                .baseUri("http://localhost:9999/api/v1")
-                .when()
-                .get("/demo/accounts")
-                .then()
-                .body("[1].currency", equalTo("USS"));
+
     }
-}
+
 
 
 
